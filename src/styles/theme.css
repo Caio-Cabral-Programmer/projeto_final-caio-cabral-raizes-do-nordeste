@@ -3,6 +3,9 @@
   --bs-primary: #ff6200;
   --bs-primary-rgb: 255, 98, 0;
   --bs-link-color: #b34700;
+  --bs-link-color-rgb: 179, 71, 0;
+  --bs-link-hover-color: #8a3700;
+  --bs-link-hover-color-rgb: 138, 55, 0;
   --rn-dark: #212529;
 }
 
@@ -10,11 +13,26 @@
   --bs-btn-bg: #ff6200;
   --bs-btn-border-color: #ff6200;
   --bs-btn-color: #212529;
+  --bs-btn-hover-bg: #e05600;
+  --bs-btn-hover-border-color: #e05600;
+  --bs-btn-hover-color: #212529;
+  --bs-btn-active-bg: #c24b00;
+  --bs-btn-active-border-color: #c24b00;
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-disabled-bg: #ff6200;
+  --bs-btn-disabled-border-color: #ff6200;
+  --bs-btn-disabled-color: #212529;
 }
 
 .btn-outline-primary {
   --bs-btn-color: #b34700;
   --bs-btn-border-color: #ff6200;
+  --bs-btn-hover-bg: #ff6200;
+  --bs-btn-hover-border-color: #ff6200;
+  --bs-btn-hover-color: #212529;
+  --bs-btn-active-bg: #ff6200;
+  --bs-btn-active-border-color: #ff6200;
+  --bs-btn-active-color: #212529;
 }
 
 .text-primary {
@@ -35,4 +53,15 @@
 .product-icon {
   font-size: 2rem;
   color: #b34700;
+}
+
+/* Texto e alvos de toque maiores em telas grandes de toque (canal totem). */
+@media (pointer: coarse) and (min-width: 1200px) {
+  html {
+    font-size: 1.125rem;
+  }
+
+  .btn {
+    min-height: 48px;
+  }
 }
