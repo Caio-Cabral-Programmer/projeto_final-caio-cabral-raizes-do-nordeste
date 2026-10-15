@@ -1,0 +1,38 @@
+/* Ajustes de tema do Bootstrap 5.3. Primária #ff6200 com texto escuro para contraste AA. */
+:root {
+  --bs-primary: #ff6200;
+  --bs-primary-rgb: 255, 98, 0;
+  --bs-link-color: #b34700;
+  --rn-dark: #212529;
+}
+
+.btn-primary {
+  --bs-btn-bg: #ff6200;
+  --bs-btn-border-color: #ff6200;
+  --bs-btn-color: #212529;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #b34700;
+  --bs-btn-border-color: #ff6200;
+}
+
+.text-primary {
+  color: #b34700 !important;
+}
+
+.progress-bar {
+  background-color: #ff6200;
+  color: #212529;
+}
+
+.navbar-brand.brand-accent,
+.navbar-brand.brand-accent:hover,
+.navbar-brand.brand-accent:focus {
+  color: #ff6200;
+}
+
+.product-icon {
+  font-size: 2rem;
+  color: #b34700;
+}
