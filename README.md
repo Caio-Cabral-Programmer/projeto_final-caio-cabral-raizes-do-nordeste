@@ -1,78 +1,27 @@
-# React + TypeScript + Vite
+# Raízes do Nordeste - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto acadêmico (UNINTER, Análise e Desenvolvimento de Sistemas, trilha Front-End): interface web responsiva para a rede de lanchonetes nordestinas "Raízes do Nordeste". É somente front-end: usuários, pedidos, pontos e pagamento são **simulados** e ficam no `localStorage` do navegador.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Cadastro, login, logout, edição e exclusão de conta.
+- Cardápio por unidade (3 unidades, 10 itens cada) e carrinho.
+- Pedido criado como **Pendente** e botão **Realizar pagamento** em cada pedido pendente.
+- Pagamento simulado em um gateway externo fictício (aprovado, recusado ou indisponível). Aprovado muda o pedido para **Confirmado**.
+- Programa de fidelidade: 10 pontos por pedido confirmado, 10% de desconto com 30 pontos e 1 pedido grátis a cada 5 pedidos confirmados (concedido uma vez por conta).
+- Banner promocional logo abaixo do header, em todas as páginas.
+- LGPD: modal de consentimento, política de privacidade, revogação e exclusão dos dados.
+- Layout mobile-first (360 px a 1920 px) com cor primária `#ff6200` (um tom de laranja).
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+React 19, TypeScript, Vite, Bootstrap 5.3, React Bootstrap, React Router (`HashRouter`) e Bootstrap Icons.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## Como executar
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev      # servidor de desenvolvimento
+npm run lint     # análise estática
+npm run build    # build de produção em dist/
 ```
