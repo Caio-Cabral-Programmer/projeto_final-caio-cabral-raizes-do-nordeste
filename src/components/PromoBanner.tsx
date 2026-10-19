@@ -7,9 +7,9 @@ export function PromoBanner() {
 
   return (
     <aside className="bg-primary text-dark py-2" aria-label="Promoção">
-      <Container className="d-flex align-items-start gap-2">
-        <i className="bi bi-gift-fill mt-1" aria-hidden="true" />
-        <p className="mb-0 small fw-semibold">
+      <Container className="d-flex align-items-center justify-content-center gap-2">
+        <i className="bi bi-gift-fill" aria-hidden="true" />
+        <p className="mb-0 small fw-semibold text-center">
           Programa Fidelidade: cada pedido vale 10 pontos. Com 30 pontos você
           ganha 10% de desconto no próximo pedido. Realizou 5 pedidos? O próximo
           é grátis!

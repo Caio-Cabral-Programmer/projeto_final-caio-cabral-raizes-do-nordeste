@@ -162,7 +162,11 @@ export function PaymentModal({ order, onHide }: PaymentModalProps) {
       </Modal.Header>
 
       {step === "review" && (
-        <Form noValidate onSubmit={handleSubmit}>
+        <Form
+          noValidate
+          onSubmit={handleSubmit}
+          className="d-flex flex-column flex-grow-1 overflow-hidden"
+        >
           <Modal.Body>
             <ul className="ps-3">
               {order.items.map((item) => (
